@@ -62,7 +62,7 @@ function populateChart() {
     myChart.destroy();
   }
 
-  let ctx = document.getElementById("myChart").getContext("2d");
+  let ctx = document.getElementById("my-chart").getContext("2d");
 
   myChart = new Chart(ctx, {
     type: 'line',
@@ -71,7 +71,7 @@ function populateChart() {
         datasets: [{
             label: "Total Over Time",
             fill: true,
-            backgroundColor: "#6666ff",
+            backgroundColor: "#0096FF",
             data
         }]
     }
@@ -79,17 +79,16 @@ function populateChart() {
 }
 
 function sendTransaction(isAdding) {
-  let nameEl = document.querySelector("#t-name");
-  let amountEl = document.querySelector("#t-amount");
-  let errorEl = document.querySelector(".form .error");
+  const nameEl = document.querySelector(`#t-name`);
+  const amountEl = document.querySelector(`#t-amount`);
+  const errorEl = document.querySelector(`form .error`);
 
   // validate form
-  if (nameEl.value === "" || amountEl.value === "") {
-    errorEl.textContent = "Missing Information";
-    return;
-  }
-  else {
-    errorEl.textContent = "";
+  if (nameEl.value === `` || amountEl.value === ``) {
+      errorEl.textContent = `Missing Information`;
+      return;
+  } else {
+      errorEl.textContent = ``;
   }
 
   // create record
