@@ -1,3 +1,5 @@
+/* Global Selectors */
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -15,6 +17,18 @@ button, input {
 
 form {
   margin-top: 25px;
+}
+
+h1 {
+
+color: white;
+
+}
+
+header {
+
+  height: 60px;
+
 }
 
 label {
@@ -43,14 +57,11 @@ table {
   width: 100%;
 }
 
+/* Class Selectors */
+
 .error {
   color: red;
 }
-
-.navbar-brand {
-  margin-left: 485px;
-}
-  
 
 .wrapper {
   margin: 0 auto;
